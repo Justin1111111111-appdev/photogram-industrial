@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   resources :photos
 
   get ":username/liked" => "photos#liked", as: :liked_photos
-  get ":username/feed" => "photos#liked", as: :liked_photos
-  get ":username/followers" => "photos#liked", as: :liked_photos
-  get ":username/following" => "photos#liked", as: :liked_photos
+  # get ":username/feed" => "photos#liked", as: :liked_photos
+  # get ":username/followers" => "photos#liked", as: :liked_photos
+  #  get ":username/following" => "photos#liked", as: :liked_photos
 
   devise_scope :user do
     get '/users/sign_out', to: 'devise/sessions#destroy'
